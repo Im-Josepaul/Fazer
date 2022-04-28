@@ -1,21 +1,27 @@
+
 import face_recognition
 import cv2
 
-# This is a demo of running face recognition on live video from your webcam. It's a little more complicated than the
-# other example, but it includes some basic performance tweaks to make things run a lot faster:
-#   1. Process each video frame at 1/4 resolution (though still display it at full resolution)
-#   2. Only detect faces in every other frame of video.
-
-# PLEASE NOTE: This example requires OpenCV (the `cv2` library) to be installed only to read from your webcam.
-# OpenCV is *not* required to use the face_recognition library. It's only required if you want to run this
-# specific demo. If you have trouble installing it, try any of the other demos that don't require it instead.
-
-# Get a reference to webcam #0 (the default one)
+# Get the live camera input of the webcam.
 video_capture = cv2.VideoCapture(0)
 
-# Load a sample picture and learn how to recognize it.
-obama_image = face_recognition.load_image_file("/home/josepaul/Desktop/Area 51/Images/Josepaul_02.jpg")
-obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
+# Loading first sample picture and learn how to recognize it.
+abraham_image = face_recognition.load_image_file("/home/josepaul/Desktop/Area 51/Images/Abraham_02.jpeg")
+abraham_face_encoding = face_recognition.face_encodings(abraham_image)[0]
+
+# Loading second sample picture and learn how to recognize it.
+josepaul_image = face_recognition.load_image_file("/home/josepaul/Desktop/Area 51/Images/Josepaul_02.jpeg")
+josepaul_face_encoding = face_recognition.face_encodings(josepaul_image)[0]
+
+# Creating an array of known face encodings and their names
+known_face_encodings = [
+    abraham_face_encoding,
+    josepaul_face_encoding,    
+]
+known_face_names = [
+    "Abraham",
+    "Josepaul",
+]
 
 # Initialize some variables
 face_locations = []
@@ -42,11 +48,13 @@ while True:
         face_names = []
         for face_encoding in face_encodings:
             # See if the face is a match for the known face(s)
-            match = face_recognition.compare_faces([obama_face_encoding], face_encoding)
+            matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
             name = "Unknown"
 
-            if match[0]:
-                name = "Josepaul"
+            # If a match was found in known_face_encodings, just use the first one.
+            if True in matches:
+                first_match_index = matches.index(True)
+                name = known_face_names[first_match_index]
 
             face_names.append(name)
 
