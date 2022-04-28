@@ -1,6 +1,7 @@
 # Fazer
 
-![Phazer Front Page](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.howtogeek.com%2F180167%2Fhtg-explains-what-is-github-and-what-do-geeks-use-it-for%2F&psig=AOvVaw3R0kmONFNximhvlqpje6mv&ust=1651207969549000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCIjNspb7tfcCFQAAAAAdAAAAABAN)
+![PHAZER  front page](https://user-images.githubusercontent.com/64831240/165681154-dc5b2f6a-9088-4c5b-8170-d9008417ce50.png)
+
 
 Phazer is a basic application of one of the most advanced technology, facial recognition. It is
 implemented with the ability to recognize and manipulate faces from Python or from the command
@@ -19,4 +20,4 @@ Retail security professionals will be notiﬁed right away when a shopper enters
 prevents a theft.
 
 Phazer is a software which supports Operating systems such as mac or Linux. It comprises of high
-level programming languages such as Python 3.3+ or Python 2.7.THANK YOU
+level programming languages such as Python 3.3+ or Python 2.7.
