@@ -1,6 +1,6 @@
 # Fazer
 
-![Phazer Front Page](/home/josepaul/Desktop/Area 51/PHAZER _By Bit legion_page-0001.jpg)
+![Phazer Front Page](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.howtogeek.com%2F180167%2Fhtg-explains-what-is-github-and-what-do-geeks-use-it-for%2F&psig=AOvVaw3R0kmONFNximhvlqpje6mv&ust=1651207969549000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCIjNspb7tfcCFQAAAAAdAAAAABAN)
 
 Phazer is a basic application of one of the most advanced technology, facial recognition. It is
 implemented with the ability to recognize and manipulate faces from Python or from the command
